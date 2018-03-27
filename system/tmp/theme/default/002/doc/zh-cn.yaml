@@ -1,0 +1,13 @@
+---
+template: default
+theme: default
+name: 002
+code: 002
+file:
+author: wws
+email: dfdf
+demo:
+qq:
+type: theme
+fromVersion: 7.0
+templateCompatible: default

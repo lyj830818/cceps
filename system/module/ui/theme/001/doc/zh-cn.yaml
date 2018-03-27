@@ -1,0 +1,13 @@
+---
+template: default
+theme: default
+name: 测试1
+code: 001
+file:
+author: lyj
+email: 29422882@qq.com
+demo:
+qq:
+type: theme
+fromVersion: 7.0
+templateCompatible: default

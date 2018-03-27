@@ -1,0 +1,1 @@
+v.theme = {"template":"mobile","theme":"default","device":"mobile"};

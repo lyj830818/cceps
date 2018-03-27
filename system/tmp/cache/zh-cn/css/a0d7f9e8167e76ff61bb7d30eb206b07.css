@@ -1,0 +1,5 @@
+#focus {padding-top: 10px;}
+#focus .block-region {margin-bottom: 15px}
+.col-custom-1 { width: " . (100/1) %}
+#block{$block->id} .card .thumbnail-cell {padding-left: 8px; padding-right: 0}
+#block{$block->id} .card .table-cell + .thumbnail-cell {padding-right: 8px; padding-left: 0}
