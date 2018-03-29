@@ -1,11 +1,108 @@
+<?php if(!class_exists('raintpl')){exit;}?><?php if(!defined("RUN_MODE")){ ?>
 
-        var SiteType = "1"; var CanDesign = "False"; var CanEditFront = 'False'; var SkinType = "3" || "2";var GridWidth = "1200px";
-        var IsWeiXin = navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
-	;
-        loadStyleSheet('/share/jquery-ui-css/ui-lightness/jquery-ui-1.10.2.custom.min.css',CanDesign != 'True'); //非编辑模式下延时加载
-	;
+
+<?php echo die(); ?>
+
+<?php } ?>
+
+<?php if(helper::isAjaxRequest()){ ?>
+
+
+  <?php if(isset($pageCSS)){ ?>
+
+
+<?php echo css::internal($pageCSS); ?>
+
+<?php } ?>
+
+  <div class="modal-dialog" style="width:<?php echo empty($modalWidth) ? 1000 : $modalWidth; ?>px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <?php echo html::closeButton(); ?>
+
+
+        <strong class="modal-title"><?php if(!empty($title)){ ?>
+
+
+<?php echo $title;?>
+
+<?php } ?></strong>
+        <?php if(!empty($subtitle)){ ?>
+
+ <small><?php echo $subtitle;?></small> <?php } ?>
+
+      </div>
+      <div class="modal-body">
+<?php }else{ ?>
+
+  <?php if($extView = $control->getExtViewFile(TPL_ROOT . 'common/header.html.php')){ ?>
+
+
+    <?php $tpl = new RainTPL;$tpl->assign($this->var);$tpl->draw($extView);?>
+
+    <?php return helper::cd(); ?>
+
+<?php } ?>
+
+  <?php $tpl = new RainTPL;$tpl->assign($this->var);$tpl->draw($control->loadModel('ui')->getEffectViewFile('default', 'common', 'header.lite'));?>
+
+
+  
+  <div id="pagebody" class="siteStyle pageStyle container-fluid pagebody_nav pagebody_nav_1">
+	<div id='freemodulehelper' style='width:1200px;margin:0 auto;height:0px;overflow:hidden;'></div>
+
+			<div id='HeaderContainer' class='HeaderContainer'>
+			<div id='HeaderZoneContainer' class='HeaderZoneContainer ZoneContainer'>
+				<div id='HeaderZone' ismodulecontainer='true' class='HeaderZone ModuleContainer clearfix'><div class="ModuleItem  StaticModule mhidden-sm mhidden-xs" wo="1910" id="module_9291414"  >
+<div class="ModuleGridGiant layout-101 layout-color- module_9291414 clearfix">
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCenter9291414 clearfix'><div class='ModuleGridContainer  ModuleGridContainer9291414' gridswidthmode='2'><div class='row ModuleSubContainer'><div class="gridBgVideo noBgVideo"><video src="" class="bgVideo" autoplay="autoplay" loop="loop"></video><div class="bgVideoMask"></div> </div><div id='Sub9291414_1' class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-6 col-md-3 col-lg-3' positiontype='2' ismodulecontainer='true'><div class="ModuleItem  StaticModule " wo="300" id="module_9291524"  >
+<div class="ModuleImageTextGiant layout-101 layout-color- module_9291524 clearfix">
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCenter9291524 clearfix'><div class="imageTextGiant-Container imageTextContainer clearfix" hasresponsive="1" autohide="0" hideheight="150" hidewidth="760" >
+	<div class="ModuleImageTextGiantContent ModuleImageTextContent">
+		<p><strong><span style="font-size: 36px;color:#f10215;">IT</span> <span style="font-size: 36px;">Industry</span></strong></p>
+	</div>
+</div>
+<script>
 	changeFontSize($('#module_9291524'));
-	;
+	</script></div>
+</div>
+
+</div>
+</div><div class='clearfix visible-xs'></div><div id='Sub9291414_2' class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-6 col-md-9 col-lg-9' positiontype='2' ismodulecontainer='true'><div class="ModuleItem  StaticModule " wo="900" id="module_9291532"  >
+<div class="ModuleNavGiant layout-103 layout-color-red module_9291532 clearfix">
+        <!-- 主体 -->
+    <div class='BodyCenter BodyCenter9291532 clearfix'><div class='main-nav-content pre_nav clearfix' AlwaysShow="0">
+ <div class="aroundMune">
+      <div class="moveMenuLeft iconfont icon-xiangzuojiantou" ></div>
+	  <div class="moveMenuRight iconfont icon-xiangyoujiantou"></div>
+ </div>
+ <?php $topNavs=$this->var['topNavs'] = $control->loadModel('nav')->getNavs('desktop_top');?>
+
+
+  <?php $navCount=$this->var['navCount'] = count($topNavs);?>
+
+
+  
+ <div class="blank-solve">
+	    <span class="navBorderTop" id="navBorderTop9291532"></span>
+	    <?php $i=$this->var['i'] =0;?>
+
+      <?php foreach($topNavs as $nav1): ?>
+
+
+		<div id="Menu_514205_9291532" class="main-nav-item-group" >
+		    <a href="<?php echo $nav1->url;?>" target="_self" class="main-nav-item fontm"><span class="OneRow"><?php echo $nav1->title;?></span></a>
+		</div>
+		<?php $i=$this->var['i'] += 1;?>
+
+      <?php endforeach; ?>
+
+	
+	  </div>		
+</div>
+<script>
 function initModuleNavGiant(moduleId,layout){
 	//去掉有的没的遮罩层
 	$('.mask-layermask').remove()
@@ -457,54 +554,123 @@ function initModuleNavGiant(moduleId,layout){
 
 	initModuleNavGiant("9291532","103");
 
-;
+</script></div>
+</div>
 
-var currentBlockID = 1;
-
-
-if(typeof($('#block' + currentBlockID).parent('.col').data('grid')) === 'undefined')
-{
-    var grid = $('#block' + currentBlockID).parents('.blocks').data('grid');
-    grid = typeof(grid) == 'undefined' ? 12 : grid;
-
-    $('#block' + currentBlockID).parent('.col').attr('data-grid', grid).attr('class', 'col col-' + grid);
+</div>
+</div><div class='clearfix visible-lg'></div><div class='clearfix visible-md'></div><div class='clearfix visible-sm'></div><div class='clearfix visible-xs'></div></div></div>
+<script type="text/javascript">
+function initGridGiant(ModuleID,options){
+	options = options || {};
+	replaceVideo(ModuleID);
+	$(document).ready(function() {
+		if(options.isFloat == 1){
+			ModuleGridFloat(ModuleID);
+		}
+		//有视频背景的  要根据视频高度设置分栏高度
+		window['initFunc'+ModuleID] = function(){
+			var bgVideo = $('#module_'+ModuleID+' .gridBgVideo');
+			if(!bgVideo.hasClass('noBgVideo')){
+				replaceVideo(ModuleID);
+				if(bgVideo.find('.bgVideo').length > 0 && bgVideo.find('.bgVideo').attr('src')){
+					//resize 的时候 视频已经加载完成了 所以 进不去canplaythrough事件
+					var	videoH = bgVideo.height();
+					$('#module_'+ModuleID).css({height: videoH});
+					//视频加载完成之后再获取高度
+					$('#module_'+ModuleID+' .gridBgVideo video.bgVideo').on('canplaythrough',function(){
+						var	videoH = bgVideo.height();
+						$('#module_'+ModuleID).css({height: videoH});
+						$('#module_'+ModuleID).find('.ModuleGridContainer .ModuleContainer.SubContainer').css({height: videoH});
+					})
+					
+				}else{
+					$('#module_'+ModuleID).css({height: 'auto'});
+				}
+				
+			}else{
+				$('#module_'+ModuleID).css({height: 'auto'});
+			}
+		}
+		$(window).off('resize.grid'+ModuleID).on('resize.grid'+ModuleID,function(){
+			window['initFunc'+ModuleID]();
+		});
+		window['initFunc'+ModuleID]();
+		
+	});
 }
 
-$('.articleTitleA').each(function()
-{
-    $(this).css('max-width', $(this).parents('li').width() - $(this).prev('.category').width() - $(this).next('.sticky').width() - $(this).parent().next('.article-date').width() - 10);
-})
-$('.articleTitleB').each(function()
-{
-    $(this).css('max-width', $(this).parent('li').width() - $(this).next('.sticky').width() - 10);
-})
-;
-	changeFontSize($('#module_9293285'));
-	;
-	changeFontSize($('#module_9293287'));
-	;
-	changeFontSize($('#module_9293412'));
-	;
-        new WOW().init();
-	;
-	//手机版的产品详情页不需要页头页尾，这里删除页头页尾的DOM以优化加载速度
-	if("False" == "False" && $(window).width() < 700 && window.location.toString().toLowerCase().indexOf('productdetail') > -1){
-		$('#HeaderContainer,#FooterContainer').remove();
+//替换视频链接 
+function replaceVideo(ModuleID){
+	if(!$('#module_'+ModuleID+' .gridBgVideo').hasClass('noBgVideo')){
+		var winWidth = $(window).width(),
+			video = $('#module_'+ModuleID+' .gridBgVideo .bgVideo');
+		if(winWidth <= 769){
+			//手机端 使用图片背景 替换视频
+			if(video.length > 0){
+				var	videoSrc = video.attr('vsrc'),
+					imageSrc = video.attr('imgsrc');
+				$('#module_'+ModuleID+' .ModuleSubContainer').css({
+					'background-image': 'url("'+imageSrc+'")',
+				});
+				video.attr('src','');
+				$('#module_'+ModuleID+' .gridBgVideo').hide();
+			}
+		}else{
+			if(!video.attr('src')){
+				video.attr('src',video.attr('vsrc'));
+			}
+			$('#module_'+ModuleID+' .ModuleSubContainer').css({
+					'background-image': 'none',
+				});
+			$('#module_'+ModuleID+' .gridBgVideo').show();
+			
+		}
 	}
-    if (!IsWeiXin){
-        addScript('/share/floaters.js',function(){
-            addScript('/index.php?c=Front/IMPanel',null);
-        });
-        (function(){ var bp = document.createElement('script'); bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s);})();
-    }else{
-        addScript('/scripts/jweixin-1.0.0.js?ddd');
-        addScript('/scripts/party/weixinshare.js?rrr');
-    }
-    $(window).load(function(){
-        if (IsWeiXin) {
-            var match = window.location.href.match(/#invite(\d+)/i);
-            var barurl = "/index.php?c=front/UserBar";
-            if(match && match[1]) barurl += "&invite="+match[1];
-            if ("YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.HomeIndex" || "YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.NewsDetail" || "YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.ProductDetail") $("#userbar").load(barurl);
+}
+//分栏悬浮的操作
+function ModuleGridFloat(ModuleID){
+	var grid = $('#module_'+ModuleID);
+	if(grid.length > 0){
+		var mainOffsetTop = grid.offset().top;
+        var mainHeight = grid.height();
+        var winHeight = $(window).height();
+        //导航的特殊处理
+        var navFloat = $('#module_'+ModuleID+'.GridCanFloat .ModuleNavGiant');
+        var navid = '';
+        if(navFloat.length > 0){
+        	navid = navFloat.closest('.ModuleItem');
+        	navid = navid.attr('id');
         }
-    });
+		$(document).on('scroll',function(event) {
+			//不在页头 或者不能悬浮时
+			if($('#HeaderZone #module_'+ModuleID).length < 1 || $('#module_'+ModuleID+' .GridCanFloat').length < 1) return false;
+			//悬浮时 如果滚动页面 并且 二级菜单显示 要强制隐藏二级菜单
+			if(navid != '') $('#'+navid+'.moduleNavFloatSubMenu').remove();
+			var winScrollTop = $(window).scrollTop();
+			if(!grid.hasClass('GridFloat') && (winScrollTop > (mainOffsetTop + mainHeight) || winScrollTop <　(mainOffsetTop - winHeight))){
+				grid.addClass('GridFloat');
+			}else if(grid.hasClass('GridFloat') && winScrollTop <= mainOffsetTop){
+				grid.removeClass('GridFloat');
+				if(grid.hasClass('StaticModule')){
+					grid.css('position','static');
+				}
+			}
+			
+			
+		});
+	}
+}
+    
+    initGridGiant("9291414",{isFloat:"0"});
+</script>
+</div>
+</div>
+
+</div>
+</div>
+			</div>
+		</div>
+
+  
+<?php } ?>
+
