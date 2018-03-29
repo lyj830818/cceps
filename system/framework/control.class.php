@@ -473,11 +473,11 @@ class control extends baseControl
             /* Hide execinfo if output has no powerby btn. */
             if($this->config->site->execInfo == 'show') $this->output = str_replace($this->config->execPlaceholder, helper::getExecInfo(), $this->output);
 
-            if($this->moduleName != 'source' and in_array($this->viewType, array('html', 'mhtml'))) 
-            {
-                $this->mergeCSS();
-                $this->mergeJS();
-            }
+//            if($this->moduleName != 'source' and in_array($this->viewType, array('html', 'mhtml')))
+//            {
+//                $this->mergeCSS();
+//                $this->mergeJS();
+//            }
         }
 
         if(RUN_MODE == 'front') $this->output = $this->app->loadClass('cleanoutput')->clean($this->output);
