@@ -292,8 +292,8 @@
 		}
 	</style><script type='text/javascript'>
         delayload({ id: ['pagebody'], src: '/images/loading2.gif', bgsrc: '/images/imgbg.png' });
-	</script><!--统计代码-->
-<script src="http://cdn.yz168.cc/share/wow.min.js"></script>
+	</script>
+<script src="/r376.mdemo.yz168.cc/cdn.yz168.cc/share/wow.min.js"></script>
 	<script>
         new WOW().init();
 	</script><script>
@@ -301,23 +301,7 @@
 	if("False" == "False" && $(window).width() < 700 && window.location.toString().toLowerCase().indexOf('productdetail') > -1){
 		$('#HeaderContainer,#FooterContainer').remove();
 	}
-    if (!IsWeiXin){
-        addScript('/share/floaters.js',function(){
-            addScript('/index.php?c=Front/IMPanel',null);
-        });
-        (function(){ var bp = document.createElement('script'); bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(bp, s);})();
-    }else{
-        addScript('/scripts/jweixin-1.0.0.js?ddd');
-        addScript('/scripts/party/weixinshare.js?rrr');
-    }
-    $(window).load(function(){
-        if (IsWeiXin) {
-            var match = window.location.href.match(/#invite(\d+)/i);
-            var barurl = "/index.php?c=front/UserBar";
-            if(match && match[1]) barurl += "&invite="+match[1];
-            if ("YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.HomeIndex" || "YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.NewsDetail" || "YouZhan.SiteFront.HomeIndex" == "YouZhan.SiteFront.ProductDetail") $("#userbar").load(barurl);
-        }
-    });
+
 </script>
 
 </body>
