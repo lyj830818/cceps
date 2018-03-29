@@ -75,8 +75,7 @@
                                                                         <div class="moveMenuLeft iconfont icon-xiangzuojiantou"></div>
                                                                         <div class="moveMenuRight iconfont icon-xiangyoujiantou"></div>
                                                                     </div>
-                                                                    {$topNavs =
-                                                                    $control->loadModel('nav')->getNavs('desktop_top')}
+                                                                    {$topNavs = $control->loadModel('nav')->getNavs('desktop_top')}
                                                                     {$navCount = count($topNavs)}
 
                                                                     <div class="blank-solve">
@@ -96,9 +95,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <script>
-                                                                    addScript('/r376.mdemo.yz168.cc/skinp/modules/ModuleNavGiant/menu.js', function () {
-                                                                        initModuleNavGiant("9291532", "103");
-                                                                    });
+                                                                    initModuleNavGiant("9291532", "103");
                                                                 </script>
                                                             </div>
                                                         </div>
@@ -112,9 +109,7 @@
                                             </div>
                                         </div>
                                         <script type="text/javascript">
-                                            addScript('/r376.mdemo.yz168.cc/skinp/modules/ModuleGridGiant/modulegrid.js', function () {
-                                                initGridGiant("9291414", {isFloat: "0"});
-                                            });
+                                            initGridGiant("9291414", {isFloat: "0"});
                                         </script>
                                     </div>
                                 </div>
