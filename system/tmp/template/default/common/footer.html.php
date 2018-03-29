@@ -47,9 +47,7 @@
 </div>
 </div><div class='clearfix visible-lg'></div><div class='clearfix visible-md'></div><div class='clearfix visible-sm'></div><div class='clearfix visible-xs'></div></div></div>
 <script type="text/javascript">
-	addScript('/skinp/modules/ModuleGridGiant/modulegrid.js',function(){
-        initGridGiant("9293270",{isFloat:"0"});
-    });
+    initGridGiant("9293270",{isFloat:"0"});
 </script>
 </div>
 </div>
@@ -74,9 +72,7 @@
 </div>
 </div><div class='clearfix visible-lg'></div><div class='clearfix visible-md'></div><div class='clearfix visible-sm'></div><div class='clearfix visible-xs'></div></div></div>
 <script type="text/javascript">
-	addScript('/skinp/modules/ModuleGridGiant/modulegrid.js',function(){
-        initGridGiant("9293395",{isFloat:"0"});
-    });
+    initGridGiant("9293395",{isFloat:"0"});
 </script>
 </div>
 </div>

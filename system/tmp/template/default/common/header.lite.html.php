@@ -28,6 +28,9 @@
         var IsWeiXin = navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
 	</script>
 	<script src="/r376.mdemo.yz168.cc/cdn.yz168.cc/PageJs.js"></script>
+	<script src="/r376.mdemo.yz168.cc/skinp/modules/ModuleNavGiant/menu.js"></script>
+	<script src="/r376.mdemo.yz168.cc/skinp/modules/ModuleGridGiant/modulegrid.js"></script>
+	<script src="/skinp/modules/ModuleGridGiant/modulegrid.js"></script>
 	<script>
         loadStyleSheet('/r376.mdemo.yz168.cc/share/jquery-ui-css/ui-lightness/jquery-ui-1.10.2.custom.min.css',CanDesign != 'True'); //非编辑模式下延时加载
 	</script>
