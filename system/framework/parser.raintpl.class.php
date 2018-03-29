@@ -56,7 +56,7 @@ class raintplParser
         $tplConfig["tplExt"]         = 'php';
         $tplConfig["cacheDir"]       = $app->getTmpRoot() . 'cache' . DS . 'raintpl' . DS . $app->getClientDevice() . DS;
         $tplConfig["debug"]          = $config->debug;
-        $tplConfig["removeComments"] = true;
+        $tplConfig["removeComments"] = false;
         
         $this->tpl->configure($tplConfig);
 
