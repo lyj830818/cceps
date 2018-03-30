@@ -10,3 +10,6 @@ $config->db->prefix   = 'eps_';
 $config->requestType = 'GET';
 
 $config->framework->detectDevice['zh-cn'] = true;
+
+$config->enabledLangs = 'zh-cn';
+$config->defaultLang = 'zh-cn';

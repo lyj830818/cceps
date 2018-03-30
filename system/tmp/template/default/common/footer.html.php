@@ -1,3 +1,4 @@
+{$contact=json_decode($config->company->contact)}
 <div id='FooterContainer' class='FooterContainer'>
     <div id='FooterZoneContainer' class='FooterZoneContainer ZoneContainer'>
         <div id='FooterZone' ismodulecontainer='true' class='FooterZone ModuleContainer clearfix'>
@@ -43,16 +44,17 @@
                                                 <div class="imageTextGiant-Container imageTextContainer clearfix"
                                                      hasresponsive="1" autohide="0" hideheight="150" hidewidth="760">
                                                     <div class="row">
-                                                        <div class="col-xs-12 col-md-4">
+                                                        <div class="col-xs-12 col-md-4" style="visibility: hidden">
                                                             <div class="ModuleImageTextGiantContent ModuleImageTextContent">
                                                                 <div style="font-family:微软雅黑;">
                                                                     <div style=";"><p
                                                                                 style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
                                                                             <span style="color: rgb(255, 255, 255);">北京网站建设有限公司</span>
                                                                         </p>
-                                                                        <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
-                                                                            <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
-                                                                        </p></div>
+<!--                                                                        <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">-->
+<!--                                                                            <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>-->
+<!--                                                                        </p>-->
+                                                                    </div>
                                                                     <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
                                                                         <p style="padding-bottom:5px"><span
                                                                                     style="color: rgb(255, 255, 255);">总部地址：北京地区XX分区5A写字楼8-88室</span>
@@ -64,37 +66,40 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {$contact=json_decode($config->company->contact)}
                                                         <div class="col-xs-12 col-md-4">
                                                             <div class="ModuleImageTextGiantContent ModuleImageTextContent">
                                                                 <div style="font-family:微软雅黑;">
                                                                     <div style=";"><p
                                                                                 style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
-                                                                            <span style="color: rgb(255, 255, 255);">深圳网站建设有限公司</span>
+                                                                            <span style="color: rgb(255, 255, 255);">{$config->company->name}</span>
                                                                         </p>
-                                                                        <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
-                                                                            <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
-                                                                        </p></div>
+                                                                        </div>
                                                                     <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
                                                                         <p style="padding-bottom:5px"><span
-                                                                                    style="color: rgb(255, 255, 255);">总部地址：深圳地区XX分区5A写字楼8-88室</span>
+                                                                                    style="color: rgb(255, 255, 255);">地址：{$contact->address}</span>
                                                                         </p>
-                                                                        <p><span style="color: rgb(255, 255, 255);">总部电话：400-000-0000</span>
+                                                                        <p style="padding-bottom:5px"><span
+                                                                                    style="color: rgb(255, 255, 255);">联系人：{$contact->contacts}</span>
                                                                         </p>
-                                                                        <p><span style="color: rgb(255, 255, 255);">电子邮箱：website@qq.com</span>
+                                                                        <p><span style="color: rgb(255, 255, 255);">电话：{$contact->phone}</span>
+                                                                        </p>
+                                                                        <p><span style="color: rgb(255, 255, 255);">电子邮箱：{$contact->email}</span>
                                                                         </p></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-xs-12 col-md-4">
+                                                        <div class="col-xs-12 col-md-4" style="visibility: hidden">
                                                             <div class="ModuleImageTextGiantContent ModuleImageTextContent">
                                                                 <div style="font-family:微软雅黑;">
                                                                     <div style=";"><p
                                                                                 style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
                                                                             <span style="color: rgb(255, 255, 255);">香港网站建设有限公司</span>
                                                                         </p>
-                                                                        <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
-                                                                            <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
-                                                                        </p></div>
+<!--                                                                        <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">-->
+<!--                                                                            <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>-->
+<!--                                                                        </p>-->
+                                                                    </div>
                                                                     <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
                                                                         <p style="padding-bottom:5px"><span
                                                                                     style="color: rgb(255, 255, 255);">总部地址：香港地区XX分区5A写字楼8-88室</span>
