@@ -858,4 +858,9 @@
     </div>
 </div>
 
+<script src="/r376.mdemo.yz168.cc/cdn.yz168.cc/share/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
 {include $control->loadModel('ui')->getEffectViewFile('default', 'common', 'footer')}
