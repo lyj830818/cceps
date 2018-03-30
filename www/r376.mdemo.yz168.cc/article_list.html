@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html><!--PHP-->
+<head>
+    <title>企业资讯</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name='renderer' content='webkit'>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/scripts/swiper.animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/share/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/share/ModuleStyleMobile.css?v=20171012"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/share/ModuleMobileNavTpl.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/share/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/scripts/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/share/datetimepicker/jquery.datetimepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/skinp/R376/skinsrc/styles/style.css"/>
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="http://cdn.yz168.cc/scripts/swiper2/css/idangerous.swiper.css">
+    <script type="text/javascript" src="http://cdn.yz168.cc/scripts/swiper2/js/idangerous.swiper.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="http://cdn.yz168.cc/scripts/Swiper-3.4.0/css/swiper.min.css"/>
+    <script type="text/javascript" src="http://cdn.yz168.cc/scripts/Swiper-3.4.0/js/swiper.min.js"></script>
+    <script type="text/javascript" src="http://cdn.yz168.cc/scripts/swiper.animate/swiper.animate1.0.2.min.js"></script>
+    <link href='http://cdn.yz168.cc/PageCss.css.php?id=901_371754_1&pagecacheid=PageCache_901_371754_1_cn_cn&siteid=901&md5=7efba9f4f6a671d8df9c7ce11362673e'
+          type='text/css' rel='stylesheet'/>
+    <!--<script src="http://cdn.yz168.cc/share/jquery.min.js" type="text/javascript"></script>-->
+    <!--<script src="http://cdn.yz168.cc/scripts/flexslider/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>-->
+    <script>
+        var SiteType = "1";
+        var CanDesign = "False";
+        var CanEditFront = 'False';
+        var SkinType = "3" || "2";
+        var GridWidth = "1200px";
+        var IsWeiXin = navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger';
+    </script>
+    <script src="http://cdn.yz168.cc/PageJs.js.php?act=MobileJs&v=2018012015541"></script>
+    <script>
+        loadStyleSheet('/share/jquery-ui-css/ui-lightness/jquery-ui-1.10.2.custom.min.css', CanDesign != 'True'); //非编辑模式下延时加载
+    </script>
+</head>
+<body id="page_371754" class="module_bg_color">
+
+<!-- 手机导航 -->
+
+<article class="ModuleMobileNavGiant layout-101 mobileNav-9291400" id="module_9291400">
+    <section class="containers">
+        <section id="MobileNav" class="mobileNav mobileNav_1">
+            <header id="header">
+                <a href="#" class="mm-hbtn">
+                    <div class="lcbody" onclick="showMobileNavFloatLayer(this)">
+                        <div class="lcitem top">
+                            <div class="rect top"></div>
+                        </div>
+                        <div class="lcitem bottom">
+                            <div class="rect bottom"></div>
+                        </div>
+                    </div>
+                </a>
+                <p></p>
+            </header>
+        </section>
+        <div class="header-model"></div>
+        <section id="MobileNavFloatLayer" class="mobileNavFloatLayer mobileNavFloatLayer_1">
+            <nav class="micro-nav-item">
+                <ul id="accordion">
+                    <li class="clearfix border1px">
+                        <a href="/" class="link " target="_self">
+                            <i class="about-us fl" style="background: none"></i>
+                            <p class="fl maxlarge">首页</p>
+                        </a>
+
+                    </li>
+                    <li class="clearfix border1px">
+                        <a href="/Content/371752.html" class="link " target="_self">
+                            <i class="about-us fl" style="background: none"></i>
+                            <p class="fl maxlarge">关于我们</p>
+                        </a>
+
+                    </li>
+                    <li class="clearfix border1px">
+                        <a href="/Content/371753.html" class="link " target="_self">
+                            <i class="about-us fl" style="background: none"></i>
+                            <p class="fl maxlarge">服务中心</p>
+                        </a>
+
+                    </li>
+                    <li class="clearfix border1px">
+                        <a href="/Content/371754.html" class="link " target="_self">
+                            <i class="about-us fl" style="background: none"></i>
+                            <p class="fl maxlarge">企业资讯</p>
+                        </a>
+
+                    </li>
+                    <li class="clearfix border1px">
+                        <a href="/Content/371755.html" class="link " target="_self">
+                            <i class="about-us fl" style="background: none"></i>
+                            <p class="fl maxlarge">联系我们</p>
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </section>
+    <script>
+        var dom = "#module_" + "9291400" + " #MobileNavFloatLayer";
+        var ScrollFix = function (elem) {
+            var u = navigator.userAgent;
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+            var startY, startTopScroll;
+            elem.addEventListener('touchstart', function (event) {
+                if (isiOS) {
+                    if (!$('body').hasClass('bodyabstre')) $('body').addClass('bodyabstre');
+                }
+                else {
+                    if (!$('body').hasClass('bodyfixd')) $('body').addClass('bodyfixd');
+                }
+                startY = event.touches[0].pageY;
+                startTopScroll = elem.scrollTop;
+                //当滚动条在最顶部的时候
+                if (startTopScroll <= 0)
+                    elem.scrollTop = 1;
+                //当滚动条在最底部的时候
+                if (startTopScroll + elem.offsetHeight >= elem.scrollHeight)
+                    elem.scrollTop = elem.scrollHeight - elem.offsetHeight - 1;
+            }, false);
+        };
+        ScrollFix($(dom).get(0));
+
+        function onViewChange() {
+            $('body').removeClass('bodyabstre').removeClass('bodyabstre');
+            container.classList.toggle('view-change');
+        }
+
+        var container = document.querySelector('.containers');
+        var bumen = document.querySelector('.lcbody');
+        bumen.addEventListener('click', onViewChange);
+
+        $(function () {
+            var Accordion = function (el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+                var links = this.el.find('.more');
+                links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            }
+
+            Accordion.prototype.dropdown = function (e) {
+                var $el = e.data.el,
+                    $this = $(this),
+                    $next = $this.parent().next();
+                $next.slideToggle();
+                $this.closest('li').toggleClass('open');
+                $this.parent().parent().siblings().find('.navul').slideUp().parent().removeClass('open');
+                $this.parent().siblings('ul').find('.navul').slideUp().parent().removeClass('open');
+                // debugger
+                if (!e.data.multiple) {
+                    $el.find('.navul').not($this.parents($el.selector + ' li').find('.navul')).slideUp().parent().removeClass('open');
+                }
+                ;
+                return false
+            }
+
+            var accordion = new Accordion($('#accordion'), false);
+        });
+    </script>
+</article>
+
+<!--分销顶部用户-->
+<div id='userbar'></div>
+<div id="pagebody" class="siteStyle pageStyle container-fluid pagebody_nav pagebody_nav_1">
+    <div id='freemodulehelper' style='width:1200px;margin:0 auto;height:0px;overflow:hidden;'></div>
+
+    <div id='HeaderContainer' class='HeaderContainer'>
+        <div id='HeaderZoneContainer' class='HeaderZoneContainer ZoneContainer'>
+            <div id='HeaderZone' ismodulecontainer='true' class='HeaderZone ModuleContainer clearfix'>
+                <div class="ModuleItem  StaticModule mhidden-sm mhidden-xs" wo="1910" id="module_9291414">
+                    <div class="ModuleGridGiant layout-101 layout-color- module_9291414 clearfix">
+                        <!-- 主体 -->
+                        <div class='BodyCenter BodyCenter9291414 clearfix'>
+                            <div class='ModuleGridContainer  ModuleGridContainer9291414' gridswidthmode='2'>
+                                <div class='row ModuleSubContainer'>
+                                    <div class="gridBgVideo noBgVideo">
+                                        <video src="" class="bgVideo" autoplay="autoplay" loop="loop"></video>
+                                        <div class="bgVideoMask"></div>
+                                    </div>
+                                    <div id='Sub9291414_1'
+                                         class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-6 col-md-3 col-lg-3'
+                                         positiontype='2' ismodulecontainer='true'>
+                                        <div class="ModuleItem  StaticModule " wo="300" id="module_9291524">
+                                            <div class="ModuleImageTextGiant layout-101 layout-color- module_9291524 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9291524 clearfix'>
+                                                    <div class="imageTextGiant-Container imageTextContainer clearfix"
+                                                         hasresponsive="1" autohide="0" hideheight="150"
+                                                         hidewidth="760">
+                                                        <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                            <p><strong><span
+                                                                    style="font-size: 36px;color:#f10215;">IT</span>
+                                                                <span style="font-size: 36px;">Industry</span></strong>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        changeFontSize($('#module_9291524'));
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='clearfix visible-xs'></div>
+                                    <div id='Sub9291414_2'
+                                         class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-6 col-md-9 col-lg-9'
+                                         positiontype='2' ismodulecontainer='true'>
+                                        <div class="ModuleItem  StaticModule " wo="900" id="module_9291532">
+                                            <div class="ModuleNavGiant layout-103 layout-color-red module_9291532 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9291532 clearfix'>
+                                                    <div class='main-nav-content pre_nav clearfix' AlwaysShow="0">
+                                                        <div class="aroundMune">
+                                                            <div class="moveMenuLeft iconfont icon-xiangzuojiantou"></div>
+                                                            <div class="moveMenuRight iconfont icon-xiangyoujiantou"></div>
+                                                        </div>
+                                                        <div class="blank-solve">
+                                                            <span class="navBorderTop" id="navBorderTop9291532"></span>
+                                                            <div id="Menu_514205_9291532" class="main-nav-item-group"
+                                                                 onmouseover="showSubMenu(this)"
+                                                                 onmouseout="hideSubMenu(this, event)">
+                                                                <a href="/" target="_self"
+                                                                   class="main-nav-item fontm"><span
+                                                                        class="OneRow">首页</span></a>
+                                                                <div id="SubMenu_514205_9291532"
+                                                                     class="sub-nav-item-group">
+                                                                </div>
+                                                            </div>
+                                                            <div id="Menu_514206_9291532" class="main-nav-item-group"
+                                                                 onmouseover="showSubMenu(this)"
+                                                                 onmouseout="hideSubMenu(this, event)">
+                                                                <a href="/Content/371752.html" target="_self"
+                                                                   class="main-nav-item fontm"><span
+                                                                        class="OneRow">关于我们</span></a>
+                                                                <div id="SubMenu_514206_9291532"
+                                                                     class="sub-nav-item-group">
+                                                                </div>
+                                                            </div>
+                                                            <div id="Menu_514207_9291532" class="main-nav-item-group"
+                                                                 onmouseover="showSubMenu(this)"
+                                                                 onmouseout="hideSubMenu(this, event)">
+                                                                <a href="/Content/371753.html" target="_self"
+                                                                   class="main-nav-item fontm"><span
+                                                                        class="OneRow">服务中心</span></a>
+                                                                <div id="SubMenu_514207_9291532"
+                                                                     class="sub-nav-item-group">
+                                                                </div>
+                                                            </div>
+                                                            <div id="Menu_514208_9291532" class="main-nav-item-group"
+                                                                 onmouseover="showSubMenu(this)"
+                                                                 onmouseout="hideSubMenu(this, event)">
+                                                                <a href="/Content/371754.html" target="_self"
+                                                                   class="main-nav-item fontm"><span
+                                                                        class="OneRow">企业资讯</span></a>
+                                                                <div id="SubMenu_514208_9291532"
+                                                                     class="sub-nav-item-group">
+                                                                </div>
+                                                            </div>
+                                                            <div id="Menu_514209_9291532" class="main-nav-item-group"
+                                                                 onmouseover="showSubMenu(this)"
+                                                                 onmouseout="hideSubMenu(this, event)">
+                                                                <a href="/Content/371755.html" target="_self"
+                                                                   class="main-nav-item fontm"><span
+                                                                        class="OneRow">联系我们</span></a>
+                                                                <div id="SubMenu_514209_9291532"
+                                                                     class="sub-nav-item-group">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        addScript('/skinp/modules/ModuleNavGiant/menu.js', function () {
+                                                            initModuleNavGiant("9291532", "103");
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='clearfix visible-lg'></div>
+                                    <div class='clearfix visible-md'></div>
+                                    <div class='clearfix visible-sm'></div>
+                                    <div class='clearfix visible-xs'></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                addScript('/skinp/modules/ModuleGridGiant/modulegrid.js', function () {
+                                    initGridGiant("9291414", {isFloat: "0"});
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='BodyContainer' class='BodyContainer'>
+        <div id='BodyZoneContainer' class='BodyZoneContainer ZoneContainer clearfix'>
+            <div id='BodyMain1Zone' ismodulecontainer='true'
+                 class='BodyMain1Zone ModuleContainer BodyMain1Zone clearfix' style='width:100%;'>
+                <div class="ModuleItem  StaticModule " wo="984" id="module_9298688">
+                    <div class="ModuleImageGiant layout-101 layout-color- module_9298688 clearfix">
+                        <!-- 主体 -->
+                        <div class='BodyCenter BodyCenter9298688 clearfix'><img class="image-animation"
+                                                                                src="/comdata/901/201711/201711102046168c4eb9.jpg"
+                                                                                alt="图片展示"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ModuleItem  StaticModule " wo="984" id="module_9298870">
+                    <div class="ModuleGridGiant layout-101 layout-color- module_9298870 clearfix">
+                        <!-- 主体 -->
+                        <div class='BodyCenter BodyCenter9298870 clearfix'>
+                            <div class='ModuleGridContainer  ModuleGridContainer9298870' gridswidthmode='2'>
+                                <div class='row ModuleSubContainer'>
+                                    <div class="gridBgVideo noBgVideo">
+                                        <video src="" class="bgVideo" autoplay="autoplay" loop="loop"></video>
+                                        <div class="bgVideoMask"></div>
+                                    </div>
+                                    <div id='Sub9298870_1'
+                                         class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-12 col-md-12 col-lg-12'
+                                         positiontype='2' ismodulecontainer='true'>
+                                        <div class="ModuleItem  StaticModule " wo="984" id="module_9299061">
+                                            <div class="ModuleImageTextGiant layout-101 layout-color- module_9299061 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9299061 clearfix'>
+                                                    <div class="imageTextGiant-Container imageTextContainer clearfix"
+                                                         hasresponsive="1" autohide="0" hideheight="150"
+                                                         hidewidth="760">
+                                                        <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                            <p style="text-align: center; line-height: normal;"><strong><span
+                                                                    style="font-size: 26px;"><span
+                                                                    style="font-family: 微软雅黑; color: rgb(241, 2, 21);">企业</span><span
+                                                                    style="font-family: 微软雅黑;">资讯</span></span></strong>
+                                                            </p>
+                                                            <p style="text-align: center; line-height: normal;"><span
+                                                                    style="font-family: 微软雅黑; color: rgb(191, 191, 191); font-size: 24px;">—</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        changeFontSize($('#module_9299061'));
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="ModuleItem  " id="module_9299059">
+                                            <div class="ModuleNewsListGiant layout-107 layout-color-red module_9299059 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9299059 clearfix'>
+                                                    <div>
+                                                        <ul class="news-container clearfix">
+                                                            <li class="news-item clearfix">
+                                                                <a href="/NewsDetail/421696.html" target='_blank'
+                                                                   class="clearfix">
+                                                                    <div class="news-time ">
+                                                                        <time>11-11</time>
+                                                                        <div class="news-icon">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="news-con ">
+                                                                        <p class="news-title">
+
+                                                                            2017年IT发展四大趋势 & 云计算三...
+                                                                        </p>
+                                                                        <p class="news-desc layout-107-news-desc">
+                                                                            对于大多数人来说，预测未来是非常困难得。但是人们总是喜欢关注未来会发生什么事情。在IT领域，人们同样喜欢关注趋势发展。到了2014年底了。又该对新的一年IT发展趋势进行预测了。所以这是个很难预测的事情，但是还是尽量多了解一下行业发展趋势，以便为那些关注行业发展的网友提供一个好的观看平台。</p>
+                                                                    </div>
+                                                                    <div class="news-img ">
+                                                                        <img src="/comdata/901/201711/2017111222564974944e.jpg"
+                                                                             alt="" title="" class="t-img">
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="news-item clearfix">
+                                                                <a href="/NewsDetail/421695.html" target='_blank'
+                                                                   class="clearfix">
+                                                                    <div class="news-time ">
+                                                                        <time>11-11</time>
+                                                                        <div class="news-icon">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="news-con ">
+                                                                        <p class="news-title">
+
+                                                                            未来企业的生态神经系统
+                                                                        </p>
+                                                                        <p class="news-desc layout-107-news-desc">
+                                                                            未来的企业，是整个商业生态系统中的一个节点。它一方面要黏着住自己的用户，一方面要能够有效连接商业生态系统中的合作伙伴（其它节点）。它一方面要为用户创造价值，一方面也要为其它节点创造价值。</p>
+                                                                    </div>
+                                                                    <div class="news-img ">
+                                                                        <img src="/comdata/901/201711/20171112225658e566c4.jpg"
+                                                                             alt="" title="" class="t-img">
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="news-item clearfix">
+                                                                <a href="/NewsDetail/421694.html" target='_blank'
+                                                                   class="clearfix">
+                                                                    <div class="news-time ">
+                                                                        <time>11-11</time>
+                                                                        <div class="news-icon">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="news-con ">
+                                                                        <p class="news-title">
+
+                                                                            IT行业职业发展方向有哪些？
+                                                                        </p>
+                                                                        <p class="news-desc layout-107-news-desc">
+                                                                            纵观当今社会各行各业,对于个人的职业发展方向,从宏观上都可以划分为四个群体,即:低管理、低技能;高管理、低技能;低管理、高技能;高管理、高技能。IT行业更是如此。面对这四类职业发展方向,除了低管理、低技能肯定会被社会淘汰外,另外三个无疑都是各有优势的发展方向。</p>
+                                                                    </div>
+                                                                    <div class="news-img ">
+                                                                        <img src="/comdata/901/201711/2017111222565870a122.jpg"
+                                                                             alt="" title="" class="t-img">
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="news-item clearfix">
+                                                                <a href="/NewsDetail/421693.html" target='_blank'
+                                                                   class="clearfix">
+                                                                    <div class="news-time ">
+                                                                        <time>11-11</time>
+                                                                        <div class="news-icon">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="news-con ">
+                                                                        <p class="news-title">
+
+                                                                            5G网络将在2020年前实现大规模商用：...
+                                                                        </p>
+                                                                        <p class="news-desc layout-107-news-desc">
+                                                                            说道通信，5G是非常火的一个词，虽然到现在，5G标准还未完全确定，但是包括我国在内的多个国家都已经明确将第一时间（2020年或更前）开始大规模商用，中国移动和中国电信都明确了将在2018年开展商用实验。5G是什么？离我们还有多远？规模商用还有哪些问题要解？中国与世界领先水平有多大差距？</p>
+                                                                    </div>
+                                                                    <div class="news-img ">
+                                                                        <img src="/comdata/901/201711/201711122256581ca223.jpg"
+                                                                             alt="" title="" class="t-img">
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li class="news-item clearfix">
+                                                                <a href="/NewsDetail/421680.html" target='_blank'
+                                                                   class="clearfix">
+                                                                    <div class="news-time ">
+                                                                        <time>11-11</time>
+                                                                        <div class="news-icon">
+                                                                            <span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="news-con ">
+                                                                        <p class="news-title">
+
+                                                                            “互联网+”未来发展十大趋势
+                                                                        </p>
+                                                                        <p class="news-desc layout-107-news-desc">
+                                                                            从现状来看，“互联网+”处于初级阶段，是个都在热谈但是没有落实的理论阶段。各领域针对“互联网+”都会做一定的论证与探索</p>
+                                                                    </div>
+                                                                    <div class="news-img ">
+                                                                        <img src="/comdata/901/201711/20171112225658a8a860.jpg"
+                                                                             alt="" title="" class="t-img">
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+
+                                                    </div>
+                                                    <script type="text/javascript"
+                                                            src="http://cdn.yz168.cc/scripts/MultiEllipsis.js"></script>
+                                                    <script>
+                                                        $(window).resize(function () {
+                                                            window['initFunc9299059'] = function () {
+                                                                new MultiEllipsis({
+                                                                    "targetCls": '.layout-107-news-desc',
+                                                                    "limitLineNumber": 3,
+                                                                    "isCharLimit": false
+                                                                });
+//        if(window.innerWidth <992){
+//            new MultiEllipsis({ "targetCls" : '.layout-107-news-desc', "limitLineNumber":3, "isCharLimit": false });
+//        }
+                                                            };
+                                                            window['initFunc9299059']();
+                                                        })
+                                                    </script>
+                                                    <script type="text/javascript"
+                                                            src="http://cdn.yz168.cc/scripts/jquery.VMiddleImg.js"></script>
+                                                    <script type="text/javascript">
+                                                        $(".ModuleNewsListGiant.layout-107 .news-img .t-img").VMiddleImg();
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='clearfix visible-lg'></div>
+                                    <div class='clearfix visible-md'></div>
+                                    <div class='clearfix visible-sm'></div>
+                                    <div class='clearfix visible-xs'></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                addScript('/skinp/modules/ModuleGridGiant/modulegrid.js', function () {
+                                    initGridGiant("9298870", {isFloat: "0"});
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id='FooterContainer' class='FooterContainer'>
+        <div id='FooterZoneContainer' class='FooterZoneContainer ZoneContainer'>
+            <div id='FooterZone' ismodulecontainer='true' class='FooterZone ModuleContainer clearfix'>
+                <div class="ModuleItem  StaticModule mhidden-xs mhidden-sm" wo="1912" id="module_9293270">
+                    <div class="ModuleGridGiant layout-101 layout-color- module_9293270 clearfix">
+                        <!-- 主体 -->
+                        <div class='BodyCenter BodyCenter9293270 clearfix'>
+                            <div class='ModuleGridContainer  ModuleGridContainer9293270' gridswidthmode='2'>
+                                <div class='row ModuleSubContainer'>
+                                    <div class="gridBgVideo noBgVideo">
+                                        <video src="" class="bgVideo" autoplay="autoplay" loop="loop"></video>
+                                        <div class="bgVideoMask"></div>
+                                    </div>
+                                    <div id='Sub9293270_1'
+                                         class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-12 col-md-12 col-lg-12'
+                                         positiontype='2' ismodulecontainer='true'>
+                                        <div class="ModuleItem  StaticModule " wo="1200" id="module_9293285">
+                                            <div class="ModuleImageTextGiant layout-101 layout-color- module_9293285 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9293285 clearfix'>
+                                                    <div class="imageTextGiant-Container imageTextContainer clearfix"
+                                                         hasresponsive="1" autohide="0" hideheight="150"
+                                                         hidewidth="760">
+                                                        <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                            <p style="text-align: center; line-height: 2em;"><span
+                                                                    style="text-align: center; font-size: 30px; font-family: 微软雅黑, SimSun; color: rgb(255, 255, 255);">联系我们</span>
+                                                            </p>
+                                                            <p style="text-align: center; line-height: 2em;"><span
+                                                                    style="font-family: 微软雅黑, SimSun; color: rgb(255, 255, 255);">您能给我们多少信任 我们就能给你多大惊喜</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        changeFontSize($('#module_9293285'));
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="ModuleItem  StaticModule " wo="1200" id="module_9293287">
+                                            <div class="ModuleImageTextGiant layout-110 layout-color- module_9293287 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9293287 clearfix'>
+                                                    <div class="imageTextGiant-Container imageTextContainer clearfix"
+                                                         hasresponsive="1" autohide="0" hideheight="150"
+                                                         hidewidth="760">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-md-4">
+                                                                <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                                    <div style="font-family:微软雅黑;">
+                                                                        <div style=";"><p
+                                                                                style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
+                                                                            <span style="color: rgb(255, 255, 255);">北京网站建设有限公司</span>
+                                                                        </p>
+                                                                            <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
+                                                                                <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
+                                                                            </p></div>
+                                                                        <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
+                                                                            <p style="padding-bottom:5px"><span
+                                                                                    style="color: rgb(255, 255, 255);">总部地址：北京地区XX分区5A写字楼8-88室</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">总部电话：400-000-0000</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">电子邮箱：website@qq.com</span>
+                                                                            </p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-4">
+                                                                <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                                    <div style="font-family:微软雅黑;">
+                                                                        <div style=";"><p
+                                                                                style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
+                                                                            <span style="color: rgb(255, 255, 255);">深圳网站建设有限公司</span>
+                                                                        </p>
+                                                                            <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
+                                                                                <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
+                                                                            </p></div>
+                                                                        <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
+                                                                            <p style="padding-bottom:5px"><span
+                                                                                    style="color: rgb(255, 255, 255);">总部地址：深圳地区XX分区5A写字楼8-88室</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">总部电话：400-000-0000</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">电子邮箱：website@qq.com</span>
+                                                                            </p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-md-4">
+                                                                <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                                    <div style="font-family:微软雅黑;">
+                                                                        <div style=";"><p
+                                                                                style="color:#6a6a6a;font-size:16px;line-height: 1.333;font-weight: bold;">
+                                                                            <span style="color: rgb(255, 255, 255);">香港网站建设有限公司</span>
+                                                                        </p>
+                                                                            <p style="font-weight:normal;color:#999;padding:10px 0 17px 0;font-size:12px">
+                                                                                <span style="color: rgb(255, 255, 255);">Website construction culture Communication Co.，Ltd.</span>
+                                                                            </p></div>
+                                                                        <div style="color:#6a6a6a;font-size: 12px;line-height: 1.846;;border:0">
+                                                                            <p style="padding-bottom:5px"><span
+                                                                                    style="color: rgb(255, 255, 255);">总部地址：香港地区XX分区5A写字楼8-88室</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">总部电话：400-000-0000</span>
+                                                                            </p>
+                                                                            <p><span style="color: rgb(255, 255, 255);">电子邮箱：website@qq.com</span>
+                                                                            </p>
+                                                                            <p></p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        changeFontSize($('#module_9293287'));
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='clearfix visible-lg'></div>
+                                    <div class='clearfix visible-md'></div>
+                                    <div class='clearfix visible-sm'></div>
+                                    <div class='clearfix visible-xs'></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                addScript('/skinp/modules/ModuleGridGiant/modulegrid.js', function () {
+                                    initGridGiant("9293270", {isFloat: "0"});
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ModuleItem  StaticModule " wo="1912" id="module_9293395">
+                    <div class="ModuleGridGiant layout-101 layout-color- module_9293395 clearfix">
+                        <!-- 主体 -->
+                        <div class='BodyCenter BodyCenter9293395 clearfix'>
+                            <div class='ModuleGridContainer  ModuleGridContainer9293395' gridswidthmode='2'>
+                                <div class='row ModuleSubContainer'>
+                                    <div class="gridBgVideo noBgVideo">
+                                        <video src="" class="bgVideo" autoplay="autoplay" loop="loop"></video>
+                                        <div class="bgVideoMask"></div>
+                                    </div>
+                                    <div id='Sub9293395_1'
+                                         class='ModuleContainer SubContainer ModuleGridItem     col-xs-12 col-sm-12 col-md-12 col-lg-12'
+                                         positiontype='2' ismodulecontainer='true'>
+                                        <div class="ModuleItem  StaticModule " wo="1200" id="module_9293412">
+                                            <div class="ModuleImageTextGiant layout-101 layout-color- module_9293412 clearfix">
+                                                <!-- 主体 -->
+                                                <div class='BodyCenter BodyCenter9293412 clearfix'>
+                                                    <div class="imageTextGiant-Container imageTextContainer clearfix"
+                                                         hasresponsive="1" autohide="0" hideheight="150"
+                                                         hidewidth="760">
+                                                        <div class="ModuleImageTextGiantContent ModuleImageTextContent">
+                                                            <p style="text-align: center; line-height: 2em;"><span
+                                                                    style="color: rgb(255, 255, 255);">版权所有 © 某某科技有限公司</span><br/>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <script>
+                                                        changeFontSize($('#module_9293412'));
+                                                    </script>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='clearfix visible-lg'></div>
+                                    <div class='clearfix visible-md'></div>
+                                    <div class='clearfix visible-sm'></div>
+                                    <div class='clearfix visible-xs'></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                                addScript('/skinp/modules/ModuleGridGiant/modulegrid.js', function () {
+                                    initGridGiant("9293395", {isFloat: "0"});
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- 通栏模块 -->
+<!-- 底部导航 -->
+<div class="ModuleItem  " id="module_9291401">
+    <div class="FootNavQRCode FootBar" style="z-index:899" onclick="QRShow();">
+        <div class="FootNavMask"></div>
+        <span class="FootNavQRCodeImg" style="display:block;"><img style="width: 160px; height: 160px;"
+                                                                   src="/index.php?c=front/Qrcode&a=getFootNavQrCode"/></span>
+    </div>
+    <div class="QQServices" style="z-index:1000" onclick="showService();">
+        <div class="FootNavMask"></div>
+        <ul class="QQList">
+            <li class="QQCancel">取消</li>
+        </ul>
+    </div>
+    <div id="MobileFootNavRenderElem" class="mobileNavRenderElem " style="position:static;"></div>
+    <div id="MobileFootNav" class="footer FootBar " style="z-index:900;" bgcolorrelatedtomobilenav="0" ParamfontColor=""
+         enable="1">
+        <ul class="foot-nav-list" style="">
+            <li style="width:25%;" itemid=7>
+                <a onclick="showHomePage()">
+                    <span class="icon homePage" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%; " itemid=2>
+                <a href="tel:">
+                    <span class="icon footTel" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;" itemid=8>
+                <a onclick="showService()">
+                    <span class="icon customService" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;" itemid=1>
+                <a href="/FeedBack" target="_self">
+                    <span class="icon footGuestbook" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=3>
+                <a href="">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=4>
+                <a href="">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=5>
+                <a href="">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=6>
+                <a href="">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=9>
+                <a href="">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+            <li style="width:25%;display:none;" itemid=11>
+                <a href="/ProductClassPage">
+                    <span class="icon" style=""></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function QRShow() {
+            $(".QQServices").hide();
+            $(".FootNavQRCode").toggle();
+            var dmHeight = $(".FootNavQRCodeImg").height();
+            var sTop = $(".footer").offset().top - dmHeight;
+            var left = $(".footer").offset().left;
+            var width = $('#pagebody').width();
+
+            if (navigator.platform.toLowerCase().indexOf("win") > -1) width = parseInt(width) - 17;
+            if (typeof (modulesContainers) != 'undefined') {
+                $(".FootNavQRCodeImg").css({
+                    "width": $('#pagebody').width() - 6,
+                    "bottom": $(".footer").height(),
+                    "left": left + "px",
+                    "height": dmHeight + "px"
+                });
+                $(".FootNavMask").css({
+                    "width": "100%",
+                    "height": $('#pagebody').outerHeight() + "px",
+                    "top": $('#pagebody').offset().top + "px"
+                });
+            } else {
+                $(".FootNavQRCodeImg").css({
+                    "width": "192px",
+                    "height": "192px",
+                    "top": "initial",
+                    "bottom": $('#MobileFootNav').innerHeight(),
+                    "left": ($('body').outerWidth() / 2 - $(".FootNavQRCodeImg").outerWidth() / 2)
+                });
+                $(".FootNavMask").css({"width": "100%", "height": "100%", "top": "0"});
+            }
+            return false;
+        }
+
+        function showService() {
+            $(".QQServices").show();
+            $(".FootNavQRCode").hide();
+            if (typeof (modulesContainers) != 'undefined') {
+                $(".mobileNav").css("z-index", 10);
+                var dmHeight = $(".QQList").outerHeight();
+                var sTop = $(".footer").offset().top - dmHeight + 45;
+                var left = $(".footer").offset().left;
+                var width = $('#pagebody').width();
+                if (navigator.platform.toLowerCase().indexOf("win") > -1) width = parseInt(width) - 17;
+                $(".QQList").css({
+                    "width": $('#pagebody').outerWidth() - 6 + "px",
+                    "top": sTop + "px",
+                    "left": left + "px",
+                    "height": dmHeight + "px"
+                });
+                $(".FootNavMask").css({
+                    "width": "100%",
+                    "height": $('#pagebody').outerHeight() + "px",
+                    "top": $('#pagebody').offset().top + "px"
+                });
+            } else {
+                $(".QQList").css({
+                    "bottom": "0px"
+                });
+                $(".FootNavMask").css({"width": "100%", "height": "100%", "top": "0"});
+            }
+            return false;
+        }
+
+        $(document).on("click", document.body, function (e) {
+            if ($(e.target).hasClass("QQCancel")) {
+                if (typeof (modulesContainers) != 'undefined') {
+                    $(".QQList").removeAttr("style");
+                }
+                $(".QQServices").hide();
+                e.stopPropagation();
+            }
+        });
+
+        function showHomePage() {
+            if (window.location.search.indexOf('view=1') > -1) {
+                window.location.href = 'http://' + window.location.host + '?view=1&SiteType=1';
+            } else {
+                window.location.href = 'http://' + window.location.host + '?SiteType=1';
+            }
+        }
+
+        $("#MobileFootNavRenderElem").remove();
+
+        function getUrlParam(name) {
+            //构造一个含有目标参数的正则表达式对象
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            //匹配目标参数
+            var r = window.location.search.substr(1).match(reg);
+            //返回参数值
+            if (r != null) {
+                return decodeURI(r[2]);
+            }
+            return null;
+        }
+
+        $(function () {
+            if ($('.footNavShopCartNum').length > 0) {
+
+                // json.data.total
+//            if (getUrlParam('72e') == '72e') {
+//                var jumpUrl = "/index.php?c=front/productorder&a=GetShopCartNum";
+//            } else {
+//                var jumpUrl = "/index.php?c=Api/shop/Cart&a=getTotalCount";
+//            }
+
+//			$.ajax({
+//				type:'get',
+//				url:jumpUrl,
+//				async:true,
+//				cache:false,
+//				success:function(json){
+//                    if (getUrlParam('72e') == '72e') {
+//                        if(!json.success){
+//                            alert(json.msg);
+//                            return;
+//                        }
+//                        $('.footNavShopCartNum').text(json.num);
+//                    } else {
+//                        if (json.code == 200) {
+//                            $('.footNavShopCartNum').text(json.data.total);
+//                            $('.subn').html(json.data.total);
+//                        }
+//                    }
+//
+//				},
+//				error:function(){
+//					console.log(arguments[0].responseText);
+//				}
+//			});
+            }
+        });
+    </script>
+</div>
+<script type="text/javascript">
+    var rawUrl = "";
+    var Page = "YouZhan.SiteFront.CommonPage_371754";
+    var PageID = "371754";
+    var PageConf = {
+        "EnableBodyTopZone": true,
+        "EnableBodyFootZone": true,
+        "EnableBodyLeftZone": false,
+        "EnableBodyRightZone": false,
+        "EnableBodyMain1Zone": true,
+        "EnableBodyMain2Zone": false,
+        "EnableBodyMain3Zone": false,
+        "EnableBodyMain4Zone": false,
+        "HeaderZonePositionType": 0,
+        "FooterZonePositionType": 0,
+        "BodyTopZonePositionType": 0,
+        "BodyFootZonePositionType": 0,
+        "BodyLeftZonePositionType": 0,
+        "BodyRightZonePositionType": 0,
+        "BodyMain1ZonePositionType": 0,
+        "BodyMain2ZonePositionType": 0,
+        "BodyMain3ZonePositionType": 0,
+        "BodyMain4ZonePositionType": 0,
+        "EnableFreeMain": true,
+        "EnableBodyFullPage": true
+    };
+    var SCRIPT_NAME = "/index.php";
+    var SiteType = "1";
+    var IsUserCenter = "0";
+    var hasFullSwitch = 0;
+    var isPlatformVersion = "1";
+    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0" || navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0" || navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0") {
+        checkBowerTip();
+    }
+</script>
+
+<!-- 加载设计界面所用的脚本和css -->
+<style>
+    @media screen and (max-width: 1200px) {
+        * {
+            cursor: url(/images/Mouse_button.png) 10 10, all !important;
+        }
+    }
+</style>
+<script type='text/javascript'>
+    delayload({id: ['pagebody'], src: '/images/loading2.gif', bgsrc: '/images/imgbg.png'});
+</script><!--统计代码-->
+<script type='text/javascript'>
+    var countersrc = '/index.php?c=Front/Count&Referer=' + escape(document.referrer) + '&Width=' + escape(screen.width) + '&Height=' + escape(screen.height) + '&Page=' + escape(window.location.pathname);
+    document.write("<script async type='text/javascript' src='" + countersrc + "'></" + "script>");
+</script>
+<script src="http://cdn.yz168.cc/share/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<script>
+    //手机版的产品详情页不需要页头页尾，这里删除页头页尾的DOM以优化加载速度
+    if ("False" == "False" && $(window).width() < 700 && window.location.toString().toLowerCase().indexOf('productdetail') > -1) {
+        $('#HeaderContainer,#FooterContainer').remove();
+    }
+    if (!IsWeiXin) {
+        addScript('/share/floaters.js', function () {
+            addScript('/index.php?c=Front/IMPanel', null);
+        });
+        (function () {
+            var bp = document.createElement('script');
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    } else {
+        addScript('/scripts/jweixin-1.0.0.js?ddd');
+        addScript('/scripts/party/weixinshare.js?rrr');
+    }
+    $(window).load(function () {
+        if (IsWeiXin) {
+            var match = window.location.href.match(/#invite(\d+)/i);
+            var barurl = "/index.php?c=front/UserBar";
+            if (match && match[1]) barurl += "&invite=" + match[1];
+            if ("YouZhan.SiteFront.CommonPage_371754" == "YouZhan.SiteFront.HomeIndex" || "YouZhan.SiteFront.CommonPage_371754" == "YouZhan.SiteFront.NewsDetail" || "YouZhan.SiteFront.CommonPage_371754" == "YouZhan.SiteFront.ProductDetail") $("#userbar").load(barurl);
+        }
+    });
+</script>
+
+</body>
+</html>

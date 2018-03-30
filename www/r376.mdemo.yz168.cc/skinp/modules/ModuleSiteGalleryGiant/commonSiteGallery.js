@@ -12,11 +12,11 @@ function initCommonSiteGalleryGiant(moduleId, layout, option,isclick, forlay) {
     var moduleIdSelector = "#module_" + moduleId;
     if($.inArray(layout,['101','104','107','108','105']) > -1){
         var IsExpandDir = option.IsExpandDir;
-        loadStyleSheet('/scripts/wookmark/css/lightgallery.min.css');
-        addScript('/scripts/wookmark/lightgallery.min.js',function(){
-            addScript('/scripts/wookmark/lg-fullscreen.min.js');
-            addScript('/scripts/wookmark/lg-thumbnail.min.js');
-            addScript('/scripts/wookmark/lg-zoom.min.js');
+        loadStyleSheet('/r376.mdemo.yz168.cc/scripts/wookmark/css/lightgallery.min.css');
+        addScript('/r376.mdemo.yz168.cc/scripts/wookmark/lightgallery.min.js',function(){
+            addScript('/r376.mdemo.yz168.cc/scripts/wookmark/lg-fullscreen.min.js');
+            addScript('/r376.mdemo.yz168.cc/scripts/wookmark/lg-thumbnail.min.js');
+            addScript('/r376.mdemo.yz168.cc/scripts/wookmark/lg-zoom.min.js');
             $(moduleIdSelector + ' .gallery-list').imagesLoaded(function(){
                 $(moduleIdSelector + ' .gallery-list').masonry({
                     itemSelector: '.grid-item',
@@ -89,7 +89,7 @@ function initCommonSiteGalleryGiant(moduleId, layout, option,isclick, forlay) {
     if (layout == '106') {
         Phonlayout106(moduleId, option);
         setTimeout(function () {
-            addScript('/scripts/MultiEllipsis.js', function () {
+            addScript('/r376.mdemo.yz168.cc/scripts/MultiEllipsis.js', function () {
                 new MultiEllipsis({"targetCls": '#module_' + moduleId + ' .layout-106 .desc', "limitLineNumber": 3, "isCharLimit": false});
             });
         }, 100)

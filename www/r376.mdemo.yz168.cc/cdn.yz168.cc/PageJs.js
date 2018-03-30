@@ -343,6 +343,11 @@ if(typeof(formatColorHex) == 'undefined'){
 //动态加载 jscript
 window.addedScript = {};
 function addScript(path,callback,afterPageLoaded) {
+    // console.log(path)
+    // if(path == '/scripts/wookmark/lightgallery.min.js'){
+    //     debugger;
+    // }
+
 	if(window.addedScript[path]){
 		if(window.addedScript[path]== -1 && typeof callback == 'function'){
 			setTimeout(function(){addScript(path,callback,afterPageLoaded)},50);
@@ -383,6 +388,7 @@ function addScript(path,callback,afterPageLoaded) {
 }
 //动态加载一大波 jscript，保证按顺序加载
 function addScripts(paths, callback, afterPageLoaded) {
+    console.log(paths);
     paths = paths || [];
     var lastCb = callback;
     for (var i = 0; i < paths.length; i++) {
@@ -400,6 +406,7 @@ function addScripts(paths, callback, afterPageLoaded) {
 
 window.addedCss = {};
 function loadStyleSheet(path,afterPageLoaded){
+    console.log(path);
 	if(window.addedCss[path]){
 		console.log(path + " have already loaded ");
 		return;
