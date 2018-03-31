@@ -40,6 +40,28 @@ class index extends control
         $this->view->title = $this->config->site->indexKeywords;
         $this->view->mobileURL  = helper::createLink('index', 'index', '', '', 'mhtml');
         $this->view->desktopURL = helper::createLink('index', 'index', '', '', 'html');
+
+        //首页幻灯片数据
+        $articleModel = $this->loadModel("article");
+        $slides = $articleModel->getList('article', [24], "addedDate_asc");
+        $this->view->slides = $slides;
+
+        //首页幻灯片下方4列文字
+        $underSlidesText = $articleModel->getList('article', [25], "addedDate_asc");
+        $this->view->underSlidesText = explode(',', reset($underSlidesText)->summary);
+
+        //首页幻灯片下方横屏一
+        $hengping1 = $articleModel->getList('article', [26], "addedDate_asc");
+        $this->view->hengping1 = reset($hengping1);
+
+        //首页幻灯片下方横屏二
+        $hengping2 = $articleModel->getList('article', [27], "addedDate_asc");
+        $this->view->hengping2 = reset($hengping2);
+
+        //合作伙伴
+        $partners = $articleModel->getList('article', [28], "addedDate_asc");
+        $this->view->partners = $partners;
+
         $this->display();
     }
 }

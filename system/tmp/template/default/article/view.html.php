@@ -37,16 +37,7 @@
     <div id='BodyZoneContainer' class='BodyZoneContainer ZoneContainer clearfix'>
         <div id='BodyMain1Zone' ismodulecontainer='true'
              class='BodyMain1Zone ModuleContainer BodyMain1Zone clearfix' style='width:100%;'>
-            <div class="ModuleItem  StaticModule " wo="984" id="module_9298688">
-                <div class="ModuleImageGiant layout-101 layout-color- module_9298688 clearfix">
-                    <!-- 主体 -->
-                    <div class='BodyCenter BodyCenter9298688 clearfix'><img class="image-animation"
-                                                                            src="/r376.mdemo.yz168.cc/comdata/901/201711/201711102046168c4eb9.jpg"
-                                                                            alt="图片展示"/>
-                    </div>
-                </div>
 
-            </div>
 
             <div class="ModuleItem  StaticModule " wo="1912" id="module_9309911">
                 <div class="ModuleGridGiant layout-101 layout-color- module_9309911 clearfix">
@@ -72,7 +63,7 @@
                                                         <div class="centera news-details-small">
                                                             <p>
                                                                 <span>发表时间：</span>
-                                                                <span>{$article->stickTime}</span>
+                                                                <span>{$article->editedDate}</span>
                                                             </p>
                                                             <p>
                                                                 <span>关注：</span>
