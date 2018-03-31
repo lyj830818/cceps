@@ -155,8 +155,9 @@
                                                 <div class="imageTextGiant-Container imageTextContainer clearfix"
                                                      hasresponsive="1" autohide="0" hideheight="150" hidewidth="760">
                                                     <div class="ModuleImageTextGiantContent ModuleImageTextContent">
-                                                        <p style="text-align: center; line-height: 2em;"><span
-                                                                    style="color: rgb(255, 255, 255);">版权所有 © 某某科技有限公司</span><br/>
+                                                        <p style="text-align: center; line-height: 2em;">
+                                                            <a href="http://www.miitbeian.gov.cn" target="_blank"><span
+                                                                    style="color: rgb(255, 255, 255);">{$config->site->icpSN}</span></a><br/>
                                                         </p>
                                                     </div>
                                                 </div>
