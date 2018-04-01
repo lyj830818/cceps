@@ -93,7 +93,7 @@ function initModuleNavGiant(moduleId,layout){
 			if(document.body.clientWidth>900){
 	            new YZ.menuNavs(evt.data.moduleId);
 	            $('#module_' + evt.data.moduleId + ' .main-nav-item.main-nav-item-hover').mouseenter();
-			}		
+			}
 		});
 		$("#module_"+moduleId+" .main-nav-item").mouseenter(function(){
 			var menu = $(this);
@@ -198,42 +198,56 @@ function initModuleNavGiant(moduleId,layout){
 	var curmenu = null;
 	var re_nav = new RegExp('^.*' + location.host, 'i');
     $('.main-nav-item,.sub-nav-item').each(function () {
-    	var menuHref = '';
-    	if(/\?.*c=.+/.test($(this).prop('href'))){
-    		menuHref = $(this).prop('href');
-    	}else{
-    		menuHref = $(this).prop('href').replace(/\?.*$/, '').replace(/\/*$/, '')
-    	}
-        var homeUrl = location.protocol + "//" + location.hostname.replace(/\/*$/, '');
-        var homeUrlArr = [];
-        homeUrlArr.push(homeUrl);
-        homeUrlArr.push(homeUrl + "/index");
-        homeUrlArr.push(homeUrl + "/home/index");
-        homeUrlArr.push(homeUrl + "/" + getCookie('Lang'));
-        homeUrlArr.push(homeUrl + "/index.php");
-        homeUrlArr.push(homeUrl + "/home/index.php");
-        homeUrlArr.push(homeUrl + "/" + getCookie('Lang') + "/index.php");
-        var isMatch = false;
-        if ($.inArray(menuHref, homeUrlArr) > -1) {
-            if ($.inArray(location.href.replace(/\?.*$/, '').replace(/\/*$/, ''), homeUrlArr) > -1) {
-                isMatch = true;
-            }
-        } else if (location.href.indexOf($(this).prop('href')) > -1 && location.href.replace(/(\?|#).*$/, '') == $(this).prop('href').replace(/(\?|#).*$/, '') && location.pathname.indexOf('-') == $(this).prop('href').replace(re_nav, '').indexOf('-')) {
-            isMatch = true;
-        }
-        if (isMatch) {
+
+    	var currentHref = document.location.href;
+    	var link = $(this).prop('href');
+    	if(link == currentHref ){
             if ($(this).hasClass('main-nav-item')) {
                 curmenu = $(this);
             } else if ($(this).hasClass('sub-nav-item')) {
                 curmenu = $(this).closest('.main-nav-item-group').find(".main-nav-item");
             }
-        }
+		}
+
+        // var menuHref = '';
+        // if(/\?.*c=.+/.test($(this).prop('href'))){
+    		// menuHref = $(this).prop('href');
+        // }else{
+    		// menuHref = $(this).prop('href').replace(/\?.*$/, '').replace(/\/*$/, '')
+        // }
+        // var homeUrl = location.protocol + "//" + location.hostname.replace(/\/*$/, '');
+        // var homeUrlArr = [];
+        // homeUrlArr.push(homeUrl);
+        // homeUrlArr.push(homeUrl + "/index");
+        // homeUrlArr.push(homeUrl + "/home/index");
+        // homeUrlArr.push(homeUrl + "/" + getCookie('Lang'));
+        // homeUrlArr.push(homeUrl + "/index.php");
+        // homeUrlArr.push(homeUrl + "/home/index.php");
+        // homeUrlArr.push(homeUrl + "/" + getCookie('Lang') + "/index.php");
+        // var isMatch = false;
+        // if ($.inArray(menuHref, homeUrlArr) > -1) {
+        //     if ($.inArray(location.href.replace(/\?.*$/, '').replace(/\/*$/, ''), homeUrlArr) > -1) {
+        //         isMatch = true;
+        //     }
+        // } else if (location.href.indexOf($(this).prop('href')) > -1 && location.href.replace(/(\?|#).*$/, '') == $(this).prop('href').replace(/(\?|#).*$/, '') && location.pathname.indexOf('-') == $(this).prop('href').replace(re_nav, '').indexOf('-')) {
+        //     isMatch = true;
+        // }
+        // if (isMatch) {
+        //     if ($(this).hasClass('main-nav-item')) {
+        //         curmenu = $(this);
+        //     } else if ($(this).hasClass('sub-nav-item')) {
+        //         curmenu = $(this).closest('.main-nav-item-group').find(".main-nav-item");
+        //     }
+        // }
     });
     if($.inArray(this.layout,['113','115']) === -1){
-    	if(curmenu != null){
-			curmenu.attr('iscurrent','1');
-			curmenu.trigger("mouseenter");
+
+    	if(curmenu == null){
+    		curmenu = $($(".main-nav-item")[0]);
 		}
+        curmenu.attr('iscurrent','1');
+        curmenu.trigger("mouseenter");
+
     }
 	//如果是113模块
 	YZ.hamburgerNav = function(moduleId,layout) {
